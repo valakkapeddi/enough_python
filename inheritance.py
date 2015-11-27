@@ -14,8 +14,8 @@ class Child(Parent):
         return 'calling base-class method - ' + Parent.another_public_method(self)
 
 a = Child()
-print a.public_method()
-print a.another_public_method()
+print(a.public_method())
+print(a.another_public_method())
 
 
 class NewStyleParent(object):
@@ -55,4 +55,4 @@ class AnotherChild(AnotherParent, NewStyleParent):
         return super(AnotherChild, self)._AnotherParent__mangled_method() + ' and ' + super(AnotherChild, self)._NewStyleParent__mangled_method()
 
 b = AnotherChild()
-print b.calls_mangled_methods()
+print(b.calls_mangled_methods())
